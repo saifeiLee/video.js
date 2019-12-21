@@ -17,6 +17,7 @@
   "homepage": "https://videojs.com",
   "author": "Steve Heffernan",
   "scripts": {
+    "lsf-dev": "babel-node demo/index.js",
     "sandbox": "node build/sandbox.js",
     "prestart": "npm-run-all sandbox",
     "start": "npm-run-all -p watch karma-server",
@@ -91,6 +92,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/node": "^7.7.7",
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.4.5",
@@ -133,8 +135,8 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-ignore": "^1.0.5",
     "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-multi-entry": "^2.0.2",
+    "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-stub": "^1.2.0",
     "sass": "^1.21.0",
@@ -159,7 +161,8 @@
       "test/dist",
       "test/api",
       "core.js",
-      "core.es.js"
+      "core.es.js",
+      "demo"
     ]
   },
   "greenkeeper": {
